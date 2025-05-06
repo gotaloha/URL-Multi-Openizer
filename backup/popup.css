@@ -1,0 +1,75 @@
+body {
+  background-color: #f00;
+  font-family: sans-serif;
+  width: 300px;
+  padding: 10px;
+}
+
+.popup-container {
+  position: fixed; /* Or absolute, depending on your layout */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: A semi-transparent background */
+  backdrop-filter: blur(10px); /* Adjust the blur value as desired */
+}
+
+.popup-content { /* Add your popup content here */
+  /* Add styles for your popup content */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white; /* Or your preferred background color */
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.input-row {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+#new-url-input {
+  flex: 1;
+  padding: 5px;
+}
+
+#add-url-btn {
+  margin-left: 5px;
+}
+
+#drop-zone {
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+  margin-top: 15px;
+  position: relative;
+  cursor: pointer;
+}
+
+#drop-zone input[type="file"] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+}
+
+.url-item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 8px;
+  padding: 6px;
+  border-bottom: 1px solid #ccc;
+}
+
+.url-item span {
+  flex: 1;
+  overflow-wrap: anywhere;
+}
